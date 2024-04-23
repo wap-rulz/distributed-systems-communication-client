@@ -18,7 +18,7 @@ public class CheckBalanceServiceClient {
         String host = null;
         int port = -1;
         if (args.length != 2) {
-            System.out.println("Usage CheckBalanceServiceClient <host> <port>");
+            System.out.println("Usage: CheckBalanceServiceClient <host> <port>");
             System.exit(1);
         }
         host = args[0];
@@ -49,10 +49,10 @@ public class CheckBalanceServiceClient {
             Scanner userInput = new Scanner(System.in);
             System.out.println("\nEnter Account ID to check the balance :");
             String accountId = userInput.nextLine().trim();
-            System.out.println("Requesting server to check the account balance for " + accountId);
+            System.out.println("\nRequesting server to check the account balance for " + accountId);
             CheckBalanceRequest request = CheckBalanceRequest.newBuilder().setAccountId(accountId).build();
             CheckBalanceResponse response = clientStub.checkBalance(request);
-            System.out.printf("My balance is " + response.getBalance() + " LKR");
+            System.out.printf("My balance is LKR %.2f\n", response.getBalance());
             Thread.sleep(1000);
         }
     }

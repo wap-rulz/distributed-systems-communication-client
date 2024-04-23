@@ -52,7 +52,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>ds.tutorials.communication.client.CheckBalanceServiceClient</mainClass>
+                            <mainClass>ds.adeesha.communication.client.CheckBalanceServiceClient</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
